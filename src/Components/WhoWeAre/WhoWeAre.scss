@@ -6,8 +6,11 @@
     display: block;
   }
   h2 {
-    text-transform:  uppercase;
+    text-transform: capitalize;
     margin-bottom: 20px;
     margin-top: 10px;
+  }
+  p, ul { 
+    color: #666;
   }
 }
