@@ -1,5 +1,4 @@
 import React, { useReducer, useEffect, useRef } from "react";
-import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
 import './HeroSlider.scss';
 
 import slides from "./data/slides";

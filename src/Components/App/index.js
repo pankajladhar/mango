@@ -6,6 +6,7 @@ import WhoWeAre from './../WhoWeAre';
 import HowWeWork from './../HowWeWork';
 import OurProducts from './../OurProducts';
 import Certificates from './../Certificates';
+import SrollToTop from './../SrollToTop';
 import './App.scss';
 
 const App = props => {
@@ -19,6 +20,7 @@ const App = props => {
                 <OurProducts />
                 <Certificates />
             </main>
+                <SrollToTop />
         </div>
     );
 };

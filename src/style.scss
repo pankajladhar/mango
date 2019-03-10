@@ -97,3 +97,9 @@ p {
 .productOverlay--open {
   overflow: hidden;
 }
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
