@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #363433;
+  // background-color: #363433;
   color: #343a40;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
@@ -60,12 +60,18 @@ h1, h2, h3, h4 {
   &::before {
     content: "";
     position: absolute;
-    width: 110px;
+    width: 50px;
     height: 5px;
     background-color: #9fc74d;
     border-radius: 8px;
     bottom: 0;
     left: 0;
+  }
+  &.invert {
+    color: #fff;
+    &::before {
+      background-color: #363433 
+    }
   }
 }
 
