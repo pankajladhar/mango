@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Header.scss';
 import Logo from './images/logo.png';
 import Hamburger from './../Hamburger';
+import SocialIcons from './../SocialIcons';
 
 const Header = props => {
     const [scroll, setScroll] = useState(0)
@@ -22,6 +23,7 @@ const Header = props => {
                 <a href="/">
                     <img className="logo" src={Logo} />
                 </a>
+                <SocialIcons />
             </div>
         </header>
     );
