@@ -1,0 +1,18 @@
+.button {
+    appearance: none;
+    border: none;
+    background: none;
+    border: 2px #f28c14 solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background ease 0.5s;
+
+    &:hover {
+      background: #f28c14;
+      color: #fff;
+    }
+}

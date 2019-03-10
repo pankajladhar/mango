@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from './../Button';
 import './ProductTile.scss';
 
 const ProductTile = ({ img, title, cost }) => {
@@ -9,6 +10,7 @@ const ProductTile = ({ img, title, cost }) => {
             <div className="productInfo">
                 <strong className="title">{title}</strong>
                 <span className="cost">{cost}</span>
+                <Button title="Prebook now"/>
             </div>
         </div>
     );
