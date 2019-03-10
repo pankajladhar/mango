@@ -2,14 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HeroSlider from './../HeroSlider';
 import Header from './../Header';
+import WhoWeAre from './../WhoWeAre';
+import HowWeWork from './../HowWeWork';
+import OurProducts from './../OurProducts';
+import Certificates from './../Certificates';
 import './App.scss';
 
 const App = props => {
     return (
-        <div>
+        <div className="app">
             <Header />
             <HeroSlider />
-            <main></main>
+            <main>
+                <WhoWeAre />
+                <HowWeWork />
+                <OurProducts />
+                <Certificates />
+            </main>
         </div>
     );
 };
