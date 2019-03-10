@@ -11,6 +11,10 @@
     cursor: pointer;
     transition: background ease 0.5s;
 
+    &:focus {
+      outline: none;
+    }
+
     &:hover {
       background: #f28c14;
       color: #fff;
