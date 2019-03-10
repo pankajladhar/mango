@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #363433;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+ul, p, 
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  // height: 100%;
+  // padding-right: 15px;
+  // padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
