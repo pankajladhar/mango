@@ -1,6 +1,9 @@
 .whoWeAre {
   background: #f9f8f4;
   padding: 50px 0;
+  @media (min-width: 576px) {
+    
+  }
   img {
     max-width: 100%;
     display: block;
