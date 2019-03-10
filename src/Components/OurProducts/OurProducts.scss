@@ -1,4 +1,17 @@
 .ourProducts {
-  height: 400px;
-  background: #fff;
+  padding: 3.125em 0 3.75em;
+  background: #f9f8f4;
+  .products {
+    cursor: pointer;
+    margin-top: 3.125em;
+    display: flex;
+    justify-content: space-between;
+    .productTile {
+      margin-right: 60px;
+      flex: 1;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
