@@ -5,14 +5,14 @@
   "dependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "react-icons": "^3.5.0"
+    "react-icons": "^3.5.0",
+    "react-scroll": "^1.7.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=. react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build": "PUBLIC_URL=. react-scripts build",
     "release": "npm run build && git checkout gh-pages && sh ./build.sh"
   },
   "devDependencies": {

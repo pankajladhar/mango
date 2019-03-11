@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './Header.scss';
 import Logo from './images/logo.png';
+import Navigation from './../Navigation';
 import Hamburger from './../Hamburger';
 import SocialIcons from './../SocialIcons';
 
@@ -14,16 +15,17 @@ const Header = props => {
         });
     }, [scroll]);
     const getClassName = () => {
-        return scroll ? "isFixed" : ""
+        // return scroll ? "isFixed" : ""
     }
     return (
         <header className={`${getClassName()}`}>
             <div className="container header-content">
-                <Hamburger />
+                {/* <Hamburger /> */}
                 <a href="/">
                     <img className="logo" src={Logo} />
                 </a>
-                <SocialIcons />
+                <Navigation />
+                {/* <SocialIcons /> */}
             </div>
         </header>
     );

@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WhoWeAreData from './../../resources/data/WhoWeAre.js';
+import {
+    Element,
+} from "react-scroll";
 import './WhoWeAre.scss';
 
 const WhoWeAre = props => {
     return (
-        <div className="whoWeAre">
+        <Element name="whoweare" className="whoWeAre">
             <div className="container">
                 <h1 className="main-title">
                     {WhoWeAreData.title()}
@@ -33,7 +36,7 @@ const WhoWeAre = props => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Element>
     );
 };
 
