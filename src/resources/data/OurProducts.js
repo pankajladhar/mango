@@ -1,6 +1,6 @@
-import img1 from "./images/product-1.png";
-import img2 from "./images/product-2.png";
-import img3 from "./images/product-3.png";
+import img1 from "./../images/OurProducts/product-1.png";
+import img2 from "./../images/OurProducts/product-2.png";
+import img3 from  "./../images/OurProducts/product-3.png";
 
 export default [
   {

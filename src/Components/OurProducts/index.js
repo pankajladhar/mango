@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProductTile from './../ProductTile';
-import Products from './data/products';
+import OurProductsData from './../../resources/data/OurProducts';
 import './OurProducts.scss';
 
 const OurProducts = props => {
@@ -12,7 +12,7 @@ const OurProducts = props => {
                     <strong>Our</strong> products
                 </h1>
                 <div className="products">
-                    {Products.map((product, i) => (
+                    {OurProductsData.map((product, i) => (
                         <ProductTile key={i} {...product} />
                     ))}
                 </div>
