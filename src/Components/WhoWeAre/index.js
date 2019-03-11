@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import WhoWeAreData from './../../resources/data/WhoWeAre.js';
 import {
     Element,
@@ -38,10 +37,6 @@ const WhoWeAre = props => {
             </div>
         </Element>
     );
-};
-
-WhoWeAre.propTypes = {
-
 };
 
 export default WhoWeAre;

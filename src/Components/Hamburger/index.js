@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import './Hamburger.scss';
 
 const Hamburger = props => {
-    const [toggle, setToggle] = useState(false);
-    const handleClick = () => {
-        setToggle(!toggle);
-    }
     return (
-        <button className="hamburger" onClick={handleClick}>
+        <button className="hamburger" onClick={()=> props.onClick()}>
             <div className="icon">
                 <div
                     className={`${
-                        !toggle
+                        !props.toggle
                             ? 'icon-container'
                             : 'icon-container icon-container-active'
                         }`}
@@ -20,13 +15,9 @@ const Hamburger = props => {
                     <span className="line" />
                 </div>
             </div>
-            <span className="title">MENU</span>
+            {/* <span className="title">MENU</span> */}
         </button>
     );
-};
-
-Hamburger.propTypes = {
-
 };
 
 export default Hamburger;

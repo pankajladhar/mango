@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import Button from './../Button';
 import ProductOverlay from './../ProductOverlay';
 import './ProductTile.scss';
@@ -25,10 +24,6 @@ const ProductTile = ({ img, title, cost }) => {
             </div>
         </div>
     );
-};
-
-ProductTile.propTypes = {
-
 };
 
 export default ProductTile;

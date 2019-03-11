@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './CopyrightFooter.scss';
 
 const CopyrightFooter = props => {
@@ -10,10 +9,6 @@ const CopyrightFooter = props => {
             </div>
         </div>
     );
-};
-
-CopyrightFooter.propTypes = {
-
 };
 
 export default CopyrightFooter;

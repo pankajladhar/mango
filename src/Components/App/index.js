@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import HeroSlider from './../HeroSlider';
 import Header from './../Header';
 import WhoWeAre from './../WhoWeAre';
@@ -27,10 +26,6 @@ const App = props => {
             <SrollToTop />
         </div>
     );
-};
-
-App.propTypes = {
-
 };
 
 export default App;

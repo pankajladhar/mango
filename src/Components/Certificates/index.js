@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import CertificatesData from './../../resources/data/Certificates';
 import './Certificates.scss';
 
@@ -16,10 +15,6 @@ const Certificates = props => {
             </div>
         </div>
     );
-};
-
-Certificates.propTypes = {
-
 };
 
 export default Certificates;

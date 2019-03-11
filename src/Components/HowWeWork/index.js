@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './HowWeWork.scss';
 
 const HowWeWork = props => {
@@ -27,10 +26,6 @@ const HowWeWork = props => {
             </div>
         </div>
     );
-};
-
-HowWeWork.propTypes = {
-
 };
 
 export default HowWeWork;

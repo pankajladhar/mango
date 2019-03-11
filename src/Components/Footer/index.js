@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import data from './../../resources/data/Footer';
 import {
     Element,
@@ -31,10 +30,6 @@ const Footer = props => {
             </footer>
         </Element>
     );
-};
-
-Footer.propTypes = {
-
 };
 
 export default Footer;

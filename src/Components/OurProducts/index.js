@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ProductTile from './../ProductTile';
 import OurProductsData from './../../resources/data/OurProducts';
 import './OurProducts.scss';
@@ -19,10 +18,6 @@ const OurProducts = props => {
             </div>
         </div>
     );
-};
-
-OurProducts.propTypes = {
-
 };
 
 export default OurProducts;

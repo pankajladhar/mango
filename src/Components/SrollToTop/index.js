@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import SrollToTopImg from './images/SrollToTop.png'
 import './SrollToTop.scss';
 
 const SrollToTop = props => {
     const [scroll, setScroll] = useState(0);
     const getClassName = () => {
-        return scroll > props.threshold ? "active" : ""
+        return scroll > 100 ? "active" : ""
     }
 
     const scrollTop = (duration) => {
@@ -58,14 +57,6 @@ const SrollToTop = props => {
             <img src={SrollToTopImg} alt="SrollToTopImg" />
         </div>
     );
-};
-
-SrollToTop.defaultProps = {
-    threshold: 100
-}
-
-SrollToTop.propTypes = {
-    threshold: PropTypes.number
 };
 
 export default SrollToTop;

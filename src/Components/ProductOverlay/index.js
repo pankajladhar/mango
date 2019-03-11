@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import ReactDom from 'react-dom';
-import PropTypes from 'prop-types';
 import './ProductOverlay.scss';
 
 const ProductOverlay = props => {
@@ -21,10 +20,6 @@ const ProductOverlay = props => {
         document.body
     );
 
-};
-
-ProductOverlay.propTypes = {
-    hideMenu: PropTypes.func
 };
 
 export default ProductOverlay;

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import './Navigation.scss';
 import {
     Link,
@@ -75,7 +74,7 @@ const Navigation = props => {
         )
     }
     return (
-        <nav className="navigation">
+        <nav className={`navigation ${props.toggle && "mobile-navigation"}`}>
             <ul className="parentmenu">
                 {navigationData.map((d) => {
                     return (
@@ -96,10 +95,6 @@ const Navigation = props => {
             </ul>
         </nav>
     );
-};
-
-Navigation.propTypes = {
-
 };
 
 export default Navigation;
