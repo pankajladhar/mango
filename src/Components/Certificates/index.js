@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import img1 from './images/img1.png';
-import img2 from './images/img2.png';
-import img3 from './images/img3.png';
+import CertificatesData from './../../resources/data/Certificates';
 import './Certificates.scss';
 
 const Certificates = props => {
     return (
         <div className="certificates">
             <div className="container">
-                <h1 className="main-title invert">
-                    <strong>Our</strong> Certificates
-                </h1>
+                <h1 className="main-title invert" dangerouslySetInnerHTML={{ __html: CertificatesData.title }} />
                 <div className="certificates-container">
-                    <img src={img1} alt={img1}/>
-                    <img src={img2} alt={img2}/>
-                    <img src={img3} alt={img3}/>
+                    {CertificatesData.logos.map(({ src, alt }) => {
+                        return (<img key={alt} src={src} alt={alt} />)
+                    })}
                 </div>
             </div>
         </div>
@@ -23,7 +19,7 @@ const Certificates = props => {
 };
 
 Certificates.propTypes = {
-    
+
 };
 
 export default Certificates;

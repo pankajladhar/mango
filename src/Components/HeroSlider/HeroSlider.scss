@@ -2,7 +2,7 @@
 .Carousel {
   position: relative;
   height: 100vh;
-  widows: 100vw;
+  width: 100vw;
 }
 
 
@@ -31,19 +31,32 @@
   position: absolute;
   top: 50%;
   left: 1em;
+  padding: 0 10px;
   transform: translateY(-50%);
   @media (min-width: 992px) {
     left: 9.375em;
   }
   h2 {
     font-family: 'Oswald', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
+    @media (min-width: 576px) {
+      font-size: 4rem;
+    }
     line-height: 1.2em;
     margin-bottom: .425em;
     text-shadow: 2px 2px 2px #000;
   }
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    br {
+      display: none;
+      @media (min-width: 576px) {
+          display: block;
+      }
+    }
+    @media (min-width: 576px) {
+      font-size: 1.25rem;
+    }
     color: #f8f9fa;
     line-height: 1.4;
   }

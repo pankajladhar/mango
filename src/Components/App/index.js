@@ -7,6 +7,8 @@ import HowWeWork from './../HowWeWork';
 import OurProducts from './../OurProducts';
 import Certificates from './../Certificates';
 import SrollToTop from './../SrollToTop';
+import Footer from './../Footer';
+import CopyrightFooter from './../CopyrightFooter';
 import './App.scss';
 
 const App = props => {
@@ -20,13 +22,15 @@ const App = props => {
                 <OurProducts />
                 <Certificates />
             </main>
-                <SrollToTop />
+            <Footer />
+            <CopyrightFooter />
+            <SrollToTop />
         </div>
     );
 };
 
 App.propTypes = {
-    
+
 };
 
 export default App;

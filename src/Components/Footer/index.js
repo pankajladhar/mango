@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Footer.scss';
 
 const Footer = props => {
     return (
-        <Footer>
+        <footer>
             <div className="container">
-                
+                div.addre
             </div>  
-        </Footer>
+        </footer>
     );
 };
 
