@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect, useRef } from "react";
-import './HeroSlider.scss';
-
-import slides from "./data/slides";
+import slides from "./../../resources/data/HeroSlider";
 import useProgress from "./useProgress";
+
+import './HeroSlider.scss';
 
 let SLIDE_DURATION = 3000;
 
