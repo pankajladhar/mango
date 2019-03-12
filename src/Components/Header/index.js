@@ -22,7 +22,7 @@ const Header = props => {
     }
 
     useEffect(() => {
-        toggle ? document.body.classList.add('nav--open'): document.body.classList.remove('nav--open');
+        toggle ? document.body.classList.add('nav--open') : document.body.classList.remove('nav--open');
         window.addEventListener('resize', onResizeScreen, false);
         window.addEventListener("scroll", onScrollScreen, false);
         return () => {
@@ -36,13 +36,17 @@ const Header = props => {
     }
     return (
         <header className={`${getClassName()}`}>
+            <div className="subheader">
+                <div className="container">
+                    <SocialIcons />
+                </div>
+            </div>
             <div className="container header-content">
                 <Hamburger toggle={toggle} onClick={handleClick} />
                 <a href="/">
                     <img className="logo" src={Logo} />
                 </a>
                 <Navigation toggle={toggle} />
-                {/* <SocialIcons /> */}
             </div>
         </header>
     );
