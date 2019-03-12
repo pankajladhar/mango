@@ -1,21 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
+import UserForm from './../UserForm'
 import './ProductOverlay.scss';
 
 const ProductOverlay = props => {
-    const overlayRef = useRef();
     const handleClick = (e) => {
-        overlayRef.current.contains(e.target) && props.hideMenu();
+        props.hideMenu()
     };
     return ReactDom.createPortal(
         <div
-            ref={overlayRef}
-            onKeyDown={() => {}}
-            tabIndex="0"
-            role="button"
             className="productOverlay"
-            onClick={handleClick}
         >
+            <UserForm hideMenu={handleClick} />
         </div>,
         document.body
     );
