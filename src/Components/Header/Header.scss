@@ -38,7 +38,11 @@ header {
       display: block;
       max-width: 200px;
       @media (max-width: 768px) {
-        max-width: 150px;
+        max-width: 130px;
+        position: absolute;
+        left: 50%;
+        top: 71%;
+        transform: translate(-50%, -50%);
       }
     }
   }

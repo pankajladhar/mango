@@ -31,6 +31,8 @@ h1, h2, h3, h4 {
   // height: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
   @media (min-width: 576px) {
     // max-width: 540px;
     max-width: 100%;
@@ -132,20 +134,6 @@ button {
   }
 }
 
-body {
-  transition: transform 0.5s ease;
-}
-.nav--open {
-  overflow: hidden;
-  transform: translateX(200px);
-  &::after {
-    content: "";
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    width: 100vw;
-    height: 100vh;
-    z-index: 99999;
-    position: fixed;
-    top: 0;
-    // display: none;
-  }
+body * {
+  -webkit-tap-highlight-color: transparent;
 }

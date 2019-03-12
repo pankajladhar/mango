@@ -10,6 +10,11 @@
   padding: 15px;
   cursor: pointer;
   transition: right linear 0.25s;
+  img {
+    @media (max-width: 767px) {
+      max-width: 20px;
+    }
+  }
   &:focus {
     outline: none;
   }

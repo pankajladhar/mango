@@ -22,7 +22,7 @@ const Header = props => {
     }
 
     useEffect(() => {
-        toggle ? document.body.classList.add('nav--open') : document.body.classList.remove('nav--open');
+        // toggle ? document.body.classList.add('nav--open') : document.body.classList.remove('nav--open');
         window.addEventListener('resize', onResizeScreen, false);
         window.addEventListener("scroll", onScrollScreen, false);
         return () => {

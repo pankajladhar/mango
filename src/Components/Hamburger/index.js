@@ -15,7 +15,11 @@ const Hamburger = props => {
                     <span className="line" />
                 </div>
             </div>
-            {/* <span className="title">MENU</span> */}
+            <span className="title">
+                        {
+                            !props.toggle ? 'MENU' : 'CLOSE'
+                        }
+            </span>
         </button>
     );
 };
