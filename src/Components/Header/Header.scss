@@ -25,6 +25,22 @@ header {
   .subheader {
     background: #222;
     height: 30px;
+    .subheader-content {
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .top-contact {
+        font-size: 14px;
+        span {
+          display: inline-block;
+          padding-right: 10px;
+          &:last-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
   }
 }
 
