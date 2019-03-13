@@ -1,4 +1,7 @@
 .navigation {
+  .socialIcons {
+    display: none;
+  }
   @media (max-width: 767px) {
     position: absolute;
     left: 0px;
@@ -10,6 +13,9 @@
     // background-color: rgba($color: #000000, $alpha: 0.5);
     &.mobile-navigation {
       transform: translateX(0px)
+    }
+    .socialIcons {
+      display: block;
     }
   }
   ul {

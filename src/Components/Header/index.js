@@ -41,8 +41,8 @@ const Header = props => {
                 <div className="container">
                     <div className="subheader-content">
                         <div className="top-contact">
-                            <span> <i className={`icon-envelop`}/> {data.address.email}</span>
-                            <span> <i className={`icon-mobile`}/> {data.address.contactNumber}</span>
+                            <span> <i className={`icon-envelop`} /> {data.address.email}</span>
+                            <span> <i className={`icon-mobile`} /> {data.address.contactNumber}</span>
                         </div>
                         <SocialIcons />
                     </div>
@@ -53,6 +53,9 @@ const Header = props => {
                 <a href="/">
                     <img className="logo" src={Logo} />
                 </a>
+                {/* <div className="social-icons-mobile mobileOnly">
+                    <SocialIcons />
+                </div> */}
                 <Navigation toggle={toggle} />
             </div>
         </header>

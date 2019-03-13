@@ -32,12 +32,23 @@ header {
       align-items: center;
       .top-contact {
         font-size: 14px;
+        @media (max-width: 767px) {
+          padding-top: 5px;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
         span {
           display: inline-block;
           padding-right: 10px;
           &:last-child {
             padding-right: 0px;
           }
+        }
+      }
+      @media (max-width: 767px) {
+        .socialIcons {
+          display: none;
         }
       }
     }

@@ -4,6 +4,7 @@ import {
     Link,
     Events,
 } from "react-scroll";
+import SocialIcons from './../SocialIcons';
 
 const navigationData = [
     {
