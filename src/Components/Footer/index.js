@@ -3,6 +3,7 @@ import data from './../../resources/data/Footer';
 import {
     Element,
 } from "react-scroll";
+import SocialIcons from './../SocialIcons'
 import './Footer.scss';
 
 const Footer = props => {
@@ -21,6 +22,7 @@ const Footer = props => {
                             <p className="line">{data.address.line4}</p>
                             <p className="line">{data.address.contactNumber}</p>
                             <p className="line">{data.address.email}</p>
+                            <SocialIcons />
                         </div>
                         <div className="right__content">
                             <img src={data.img} alt={data.alt} />
