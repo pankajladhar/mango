@@ -5,6 +5,7 @@ import './OurProducts.scss';
 import {
     Element,
 } from "react-scroll";
+import data from './../../resources/data/Footer'
 
 const OurProducts = props => {
     return (
@@ -18,6 +19,9 @@ const OurProducts = props => {
                         <ProductTile key={i} {...product} />
                     ))}
                 </div>
+                <p>
+                    For bulk orders or for regular supply of our mangoes please write to us at <u>{data.address.email}</u>
+                </p>
             </div>
         </Element>
     );

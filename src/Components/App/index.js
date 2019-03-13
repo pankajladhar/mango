@@ -23,6 +23,17 @@ const App = props => {
                 {/* <HowWeWork /> */}
                 {/* <OurFarm /> */}
                 <OurProducts />
+                <div className="givingBack">
+                    <div className="container">
+                        <h1 className="main-title">
+                            <strong>Giving </strong>
+                            back to society
+                        </h1>
+                        <p>
+                            Feel proud when you buy a mango from us because you are helping in contributing to an Institution for the Aged  – TARA in Rajarajeshwari Nagar which is run by the bangalore freemason’s society.
+                        </p>
+                    </div>
+                </div>
                 <Certificates />
             </main>
             <Footer />
