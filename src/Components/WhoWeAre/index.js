@@ -20,7 +20,13 @@ const WhoWeAre = props => {
                         <p>
                             {WhoWeAreData.paragraph}
                         </p>
-                        <ul>
+                        <p>
+                            {WhoWeAreData.paragraph1}
+                        </p>
+                        <p>
+                            {WhoWeAreData.paragraph2}
+                        </p>
+                        {WhoWeAreData.listItems && <ul>
                             {
                                 WhoWeAreData.listItems.map((item) => {
                                     return (
@@ -28,7 +34,7 @@ const WhoWeAre = props => {
                                     )
                                 })
                             }
-                        </ul>
+                        </ul>}
                     </div>
                     <div className="right__content">
                         <img src={WhoWeAreData.img} alt={WhoWeAreData.alt} />

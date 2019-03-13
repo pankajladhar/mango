@@ -8,7 +8,7 @@ import {
 const navigationData = [
     {
         label: "Home",
-        url: "whoweare"
+        url: "home"
     },
     {
         label: "About Mango",
@@ -20,7 +20,7 @@ const navigationData = [
             },
             {
                 label: "Our farm",
-                url: "",
+                url: "ourFarm",
             }
         ]
     },
@@ -28,15 +28,22 @@ const navigationData = [
         label: "Why Mango",
         url: ""
     },
+
+    {
+        label: "Buy",
+        url: "ourProducts"
+    },
     {
         label: "Gift",
         url: ""
-    },
-    {
-        label: "Contact us",
-        url: "contactus"
     }
 ]
+
+// ,
+//     {
+//         label: "Contact",
+//         url: "contactus"
+//     }
 
 const Navigation = props => {
     useEffect(() => {
@@ -61,7 +68,7 @@ const Navigation = props => {
                             <Link
                                 to={d.url}
                                 spy={true}
-                                offset={-80}
+                                offset={-100}
                                 smooth={true}
                                 duration={500}
                             >
