@@ -7,7 +7,7 @@ import './HeroSlider.scss';
 let SLIDE_DURATION = 3000;
 
 function Carousel(props) {
-  return <section className="Carousel" {...props} />;
+  return <section className="heroSlider Carousel" {...props} />;
 }
 
 function Slides(props) {

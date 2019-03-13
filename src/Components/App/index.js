@@ -21,7 +21,7 @@ const App = props => {
                 <Home />
                 <WhoWeAre />
                 {/* <HowWeWork /> */}
-                {/* <OurFarm /> */}
+                <OurFarm />
                 <OurProducts />
                 <div className="givingBack">
                     <div className="container">
