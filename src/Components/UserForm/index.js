@@ -8,6 +8,16 @@ const UserForm = (props) => {
     return (
         <div className="userForm">
             <h3>Enter you details</h3>
+            <div class="form-group">
+                <label for="sel1">Select Product:</label>
+                <select class="form-control" id="sel1">
+                    <option>1/2 dozen</option>
+                    <option>1 dozen</option>
+                    <option>2 dozen</option>
+                    <option>3 dozen</option>
+                    <option>5 dozen</option>
+                </select>
+            </div>
             <div className="form-group">
                 <label htmlFor="cname">
                     Name
