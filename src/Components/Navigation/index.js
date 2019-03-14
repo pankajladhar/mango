@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navigation.scss';
 import {
     Link,
     Events,
 } from "react-scroll";
 import Button from './../Button';
+import ProductOverlay from './../ProductOverlay';
 
 const navigationData = [
     {
@@ -60,6 +61,16 @@ const Navigation = props => {
             Events.scrollEvent.remove("end");
         }
     });
+
+    const [toggle, setToggle] = useState(false);
+    const handleClick = () => {
+        document.body.classList.add('productOverlay--open');
+        setToggle(true);
+    }
+    const hideMenu = () => {
+        setToggle(false);
+        document.body.classList.remove('productOverlay--open');
+    }
     const renderChild = (items) => {
         return (
             <ul className="childMenu">
@@ -102,7 +113,8 @@ const Navigation = props => {
                 })}
             </ul>
             <div className="prebook">
-                <Button title="Prebook now" type="inverse" />
+                <Button title="Prebook now" type="inverse" onClick={handleClick} />
+                {toggle && <ProductOverlay hideMenu={hideMenu} />}
             </div>
         </nav>
     );
