@@ -18,6 +18,7 @@ mv ./build/favicon.ico favicon.ico
 # mv ./build/font-awesome.css font-awesome.css
 mv ./build/static/ static
 # mv ./build/fonts/ fonts
+cp ./index.html 404.html
 
 today=`date '+%Y_%m_%d__%H_%M_%S'`;
 git add .
