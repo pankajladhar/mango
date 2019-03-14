@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './../Button';
 import SimpleReactValidator from './../../simple-react-validator'
+import { WriteInFirebase } from './../../Firebase';
 import './UserForm.scss';
 
 class UserForm extends Component {
@@ -13,13 +14,21 @@ class UserForm extends Component {
     }
 
     handleClick = () => {
-        if (this.validator.allValid()) {
-            alert('You submitted the form and stuff!');
-        } else {
-            this.validator.showMessages();
-            this.forceUpdate();
-            console.log(this.validator)
-        }
+        // if (this.validator.allValid()) {
+            let data = {
+                selectedProduct: "1 dozen",
+                name: "Pankaj Ladhar",
+                email: "ladharpankaj@gmail.com",
+                contactNumber: "8147311189",
+                address: "Bangalore",
+            }
+            WriteInFirebase(data, "customers").then(() => {
+                alert('You submitted the form and stuff!');
+            })
+        // } else {
+        //     this.validator.showMessages();
+        //     this.forceUpdate();
+        // }
     }
 
     handleChange = (e) => {
