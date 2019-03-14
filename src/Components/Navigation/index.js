@@ -10,7 +10,7 @@ import ProductOverlay from './../ProductOverlay';
 const navigationData = [
     {
         label: "Home",
-        url: "home"
+        url: "heroSlider"
     },
     {
         label: "About us",

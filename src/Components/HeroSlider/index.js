@@ -1,3 +1,6 @@
+import {
+  Element,
+} from "react-scroll";
 import React, { useReducer, useEffect, useRef } from "react";
 import slides from "./../../resources/data/HeroSlider";
 import useProgress from "./useProgress";
@@ -7,7 +10,11 @@ import './HeroSlider.scss';
 let SLIDE_DURATION = 3000;
 
 function Carousel(props) {
-  return <section className="heroSlider Carousel" {...props} />;
+  return (
+    <Element name="heroSlider">
+      <section className="heroSlider Carousel" {...props} />
+    </Element>
+  )
 }
 
 function Slides(props) {
@@ -36,8 +43,8 @@ function Slide({ isCurrent, takeFocus, image, id, title, children }) {
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="SlideContent">
-        <h2 id={id} dangerouslySetInnerHTML={{__html: title}} />
-        <p dangerouslySetInnerHTML={{__html: children}} />
+        <h2 id={id} dangerouslySetInnerHTML={{ __html: title }} />
+        <p dangerouslySetInnerHTML={{ __html: children }} />
       </div>
     </li>
   );
