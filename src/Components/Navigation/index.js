@@ -12,7 +12,7 @@ const navigationData = [
         url: "home"
     },
     {
-        label: "About Mango",
+        label: "About us",
         url: "",
         child: [
             {
@@ -22,29 +22,29 @@ const navigationData = [
             {
                 label: "Our farm",
                 url: "ourFarm",
+            },
+            {
+                label: "Why Mango",
+                url: ""
             }
         ]
     },
     {
-        label: "Why Mango",
-        url: ""
-    },
-
-    {
-        label: "Buy",
-        url: "ourProducts"
-    },
-    {
-        label: "Gift",
-        url: ""
+        label: "Contact",
+        url: "contactus"
     }
 ]
 
-// ,
-//     {
-//         label: "Contact",
-//         url: "contactus"
-//     }
+// {
+//     label: "Buy",
+//     url: "ourProducts"
+// },
+// {
+//     label: "Gift",
+//     url: ""
+// }
+
+
 
 const Navigation = props => {
     useEffect(() => {

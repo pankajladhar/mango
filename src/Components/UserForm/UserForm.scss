@@ -36,6 +36,10 @@
     padding-bottom: 5px;
     display: block;
     color: #343a40;
+    &.srv-validation-message {
+      color: #e02007;
+      font-size: 12px;
+    }
     .asterisk {
       color: #e02007;
       display: inline-block;
