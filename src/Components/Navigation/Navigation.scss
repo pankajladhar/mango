@@ -71,13 +71,6 @@
         > .childMenu {
           max-height: 500px;
           opacity: 1;
-          @media (max-width: 767px) {
-            max-height: none;
-            position: static;
-            height: 100%;
-            width: auto;
-            padding-bottom: 0;
-          }
         }      
       }
       &:hover {
@@ -107,6 +100,14 @@
     position: absolute;
     transition: opacity max-height .5s ease;
     padding: 10px 20px;
+    @media (max-width: 767px) {
+      max-height: none;
+      position: static;
+      opacity: 1;
+      width: auto;
+      padding-bottom: 0px;
+      height: auto;
+    }
     a {
       padding-bottom: 8px;
       display: block;
