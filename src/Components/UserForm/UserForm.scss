@@ -25,9 +25,9 @@
   transition: transform 0.5s ease;
   @media (min-width: 576px) {
     width: 400px;
-    top: 50%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-30%);
   }
   label {
     font-family: inherit;
@@ -36,9 +36,10 @@
     padding-bottom: 5px;
     display: block;
     color: #343a40;
-    &.srv-validation-message {
+    &.has-error {
       color: #e02007;
       font-size: 12px;
+      padding-bottom: 0;
     }
     .asterisk {
       color: #e02007;
@@ -69,7 +70,7 @@
 .form-group {
   margin-bottom: 10px;
   textarea.form-control {
-    height: 60px;
+    height: 80px;
   }
 }
 .form-control {
