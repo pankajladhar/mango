@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './../Button';
 import FormValidator from './FormValidator';
+import FullPageLoader from './../FullPageLoader'
 import { WriteInFirebase } from './../../Firebase';
 import './UserForm.scss';
 
@@ -53,6 +54,7 @@ class UserForm extends Component {
             phone: '',
             address: '',
             selectedProduct: this.props.selectedProduct || '1 dozen',
+            showFullPageLoader: false,
             validation: this.validator.valid()
         }
 
@@ -74,6 +76,7 @@ class UserForm extends Component {
         this.submitted = true;
 
         if (validation.isValid) {
+            this.setState({ showFullPageLoader: true });
             let data = {
                 selectedProduct: this.state.selectedProduct,
                 name: this.state.cname,
@@ -82,7 +85,11 @@ class UserForm extends Component {
                 address: this.state.address,
             }
             WriteInFirebase(data, "customers").then(() => {
-                alert('You submitted the form and stuff!');
+                this.setState({
+                    showFullPageLoader: false
+                }, () => {
+                    this.props.showSucessMessage()
+                });
             })
         }
     }
@@ -95,7 +102,7 @@ class UserForm extends Component {
             this.state.validation
         return (
             <div className="userForm">
-                <h3>Enter you details</h3>
+                <h3>Enter your details</h3>
                 <div className="form-group">
                     <label htmlFor="sel1">Select Product:</label>
                     <select className="form-control"
@@ -162,6 +169,7 @@ class UserForm extends Component {
                     <Button title="Save Details" onClick={this.handleFormSubmit} />
                 </div>
                 <div className="close-btn" onClick={this.props.hideMenu}>x</div>
+                {this.state.showFullPageLoader && <FullPageLoader />}
             </div>
         );
     }
