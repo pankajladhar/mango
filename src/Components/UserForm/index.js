@@ -33,7 +33,7 @@ class UserForm extends Component {
                 <div className="form-group">
                     <label htmlFor="sel1">Select Product:</label>
                     <select className="form-control" id="sel1">
-                        <option>1/2 dozen</option>
+                        {/* <option>1/2 dozen</option> */}
                         <option>1 dozen</option>
                         <option>2 dozen</option>
                         <option>3 dozen</option>

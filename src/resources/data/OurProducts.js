@@ -5,11 +5,11 @@ import img4 from  "./../images/OurProducts/product-4.png";
 import img5 from  "./../images/OurProducts/product-5.png";
 
 export default [
-  {
-    img: img1,
-    title: "1/2 dozen",
-    cost:"500.00"
-  },
+  // {
+  //   img: img1,
+  //   title: "1/2 dozen",
+  //   cost:"500.00"
+  // },
   {
     img: img2,
     title: "1 dozen",
