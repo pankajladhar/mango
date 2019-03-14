@@ -52,7 +52,7 @@ class UserForm extends Component {
             email: '',
             phone: '',
             address: '',
-            selectedProduct: '1 dozen',
+            selectedProduct: this.props.selectedProduct || '1 dozen',
             validation: this.validator.valid()
         }
 
@@ -99,6 +99,7 @@ class UserForm extends Component {
                 <div className="form-group">
                     <label htmlFor="sel1">Select Product:</label>
                     <select className="form-control"
+                        value={this.state.selectedProduct}
                         name="selectedProduct"
                         onChange={this.handleInputChange}
                         id="sel1">

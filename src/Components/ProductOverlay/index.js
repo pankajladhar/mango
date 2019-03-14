@@ -11,7 +11,7 @@ const ProductOverlay = props => {
         <div
             className="productOverlay"
         >
-            <UserForm hideMenu={handleClick} />
+            <UserForm selectedProduct={props.title} hideMenu={handleClick} />
         </div>,
         document.body
     );

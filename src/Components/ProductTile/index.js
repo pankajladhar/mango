@@ -20,7 +20,7 @@ const ProductTile = ({ img, title, cost }) => {
                 <strong className="title">{title}</strong>
                 <span className="cost">{cost}</span>
                 <Button title="Prebook now" onClick={handleClick} />
-                {toggle && <ProductOverlay hideMenu={hideMenu} />}
+                {toggle && <ProductOverlay title={title} hideMenu={hideMenu} />}
             </div>
         </div>
     );
