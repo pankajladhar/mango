@@ -3,7 +3,7 @@ import HeroSlider from './../HeroSlider';
 import Header from './../Header';
 import AboutUs from './../AboutUs';
 import WhoWeAre from './../WhoWeAre';
-// import HowWeWork from './../HowWeWork';
+import WhyMango from './../WhyMango';
 import OurFarm from './../OurFarm';
 import OurProducts from './../OurProducts';
 import Certificates from './../Certificates';
@@ -20,8 +20,8 @@ const HomePage = props => {
             <main>
                 <AboutUs />
                 <WhoWeAre />
-                {/* <HowWeWork /> */}
                 <OurFarm />
+                <WhyMango />
                 <OurProducts />
                 <div className="givingBack">
                     <div className="container">

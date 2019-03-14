@@ -26,7 +26,7 @@ const navigationData = [
             },
             {
                 label: "Why Mango",
-                url: ""
+                url: "whyMango"
             }
         ]
     },
