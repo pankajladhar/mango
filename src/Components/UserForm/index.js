@@ -52,6 +52,7 @@ class UserForm extends Component {
             email: '',
             phone: '',
             address: '',
+            selectedProduct: '1 dozen',
             validation: this.validator.valid()
         }
 
@@ -74,7 +75,7 @@ class UserForm extends Component {
 
         if (validation.isValid) {
             let data = {
-                selectedProduct: "1 dozen",
+                selectedProduct: this.state.selectedProduct,
                 name: this.state.cname,
                 email: this.state.email,
                 contactNumber: this.state.phone,
@@ -97,12 +98,15 @@ class UserForm extends Component {
                 <h3>Enter you details</h3>
                 <div className="form-group">
                     <label htmlFor="sel1">Select Product:</label>
-                    <select className="form-control" id="sel1">
-                        {/* <option>1/2 dozen</option> */}
-                        <option>1 dozen</option>
-                        <option>2 dozen</option>
-                        <option>3 dozen</option>
-                        <option>5 dozen</option>
+                    <select className="form-control"
+                        name="selectedProduct"
+                        onChange={this.handleInputChange}
+                        id="sel1">
+                        {/* <option value="1/2 dozen">1/2 dozen</option> */}
+                        <option value="1 dozen">1 dozen</option>
+                        <option value="2 dozen">2 dozen</option>
+                        <option value="3 dozen">3 dozen</option>
+                        <option value="5 dozen">5 dozen</option>
                     </select>
                 </div>
                 <div className="form-group">
