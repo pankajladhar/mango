@@ -2,7 +2,6 @@
     appearance: none;
     border: none;
     background: none;
-    border: 2px #f28c14 solid;
     border-radius: 5px;
     font-size: 1rem;
     padding: 10px 15px;
@@ -11,12 +10,26 @@
     cursor: pointer;
     transition: background ease 0.5s;
 
-    &:focus {
-      outline: none;
+    &.button-primary {
+      border: 2px #f28c14 solid;
+      &:hover {
+        background: #f28c14;
+        color: #fff;
+      }
     }
 
-    &:hover {
+    &.button-inverse {
       background: #f28c14;
+      border: 2px transparent solid;
       color: #fff;
+      &:hover {
+        color: #000;
+        background-color: transparent;
+        border: 2px #f28c14 solid;
+      }
+    }
+
+    &:focus {
+      outline: none;
     }
 }

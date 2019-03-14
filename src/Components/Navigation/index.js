@@ -4,7 +4,7 @@ import {
     Link,
     Events,
 } from "react-scroll";
-import SocialIcons from './../SocialIcons';
+import Button from './../Button';
 
 const navigationData = [
     {
@@ -101,6 +101,9 @@ const Navigation = props => {
                     )
                 })}
             </ul>
+            <div className="prebook">
+                <Button title="Prebook now" type="inverse" />
+            </div>
         </nav>
     );
 };

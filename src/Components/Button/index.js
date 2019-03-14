@@ -6,11 +6,15 @@ const Button = props => {
         props.onClick()
     }
     return (
-        <button className="button"
+        <button className={`button button-${props.type}`}
             onClick={handleClick}>
             {props.title}            
         </button>
     );
 };
+
+Button.defaultProps = {
+    type: "primary"
+}
 
 export default Button;
