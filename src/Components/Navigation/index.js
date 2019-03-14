@@ -13,7 +13,7 @@ const navigationData = [
     },
     {
         label: "About us",
-        url: "",
+        url: "aboutUs",
         child: [
             {
                 label: "Who we are",

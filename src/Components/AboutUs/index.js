@@ -3,11 +3,11 @@ import data from './../../resources/data/Home'
 import {
     Element,
 } from "react-scroll";
-import './Home.scss';
+import './AboutUs.scss';
 
-const Home = () => {
+const AboutUs = () => {
     return (
-        <Element name="home" className="home">
+        <Element name="aboutUs" className="aboutUs">
             <div className="container">
                 {data.paragraph}
             </div>
@@ -15,4 +15,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default AboutUs;

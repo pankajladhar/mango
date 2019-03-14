@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSlider from './../HeroSlider';
 import Header from './../Header';
-import Home from './../Home';
+import AboutUs from './../AboutUs';
 import WhoWeAre from './../WhoWeAre';
 // import HowWeWork from './../HowWeWork';
 import OurFarm from './../OurFarm';
@@ -18,7 +18,7 @@ const App = props => {
             <Header />
             <HeroSlider />
             <main>
-                <Home />
+                <AboutUs />
                 <WhoWeAre />
                 {/* <HowWeWork /> */}
                 <OurFarm />
