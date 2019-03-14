@@ -116,20 +116,23 @@
     content: "";
     height: 1rem;
     width: 1rem;
-    border: 2px #fff solid;
+    border: 2px #f28c14 solid;
     border-radius: 50%;
     position: absolute;
     top: -5px;
     left: -5px;
     padding: 3px;
-    transform: scale(0);
+    // transform: scale(0);
+    opacity: 0;
+    transform-style: preserve-3d;
     transition: .5s all;
   }
 }
 
 .SlideNavItem > button[aria-current="true"] {
   > span::after {
-    transform: scale(1)
+    // transform: scale(1)
+    opacity: 1;
   }
 }
 
