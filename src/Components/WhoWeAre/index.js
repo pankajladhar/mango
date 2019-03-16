@@ -1,13 +1,11 @@
 import React from 'react';
+import Scrolling from './../Scrolling';
 import WhoWeAreData from './../../resources/data/WhoWeAre.js';
-import {
-    Element,
-} from "react-scroll";
 import './WhoWeAre.scss';
 
 const WhoWeAre = props => {
     return (
-        <Element name="whoweare" className="whoWeAre">
+        <div name="whoweare" className="whoWeAre">
             <div className="container">
                 <h1 className="main-title">
                     {WhoWeAreData.title()}
@@ -41,8 +39,8 @@ const WhoWeAre = props => {
                     </div>
                 </div>
             </div>
-        </Element>
+        </div>
     );
 };
 
-export default WhoWeAre;
+export default Scrolling(WhoWeAre, 'whoWeAre');

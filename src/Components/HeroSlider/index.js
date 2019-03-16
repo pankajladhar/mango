@@ -1,7 +1,5 @@
-import {
-  Element,
-} from "react-scroll";
 import React, { useReducer, useEffect, useRef } from "react";
+import Scrolling from './../Scrolling';
 import slides from "./../../resources/data/HeroSlider";
 import useProgress from "./useProgress";
 
@@ -11,9 +9,7 @@ let SLIDE_DURATION = 3000;
 
 function Carousel(props) {
   return (
-    <Element name="heroSlider">
-      <section className="heroSlider Carousel" {...props} />
-    </Element>
+    <section className="heroSlider Carousel" {...props} />
   )
 }
 
@@ -169,14 +165,8 @@ function HeroSlider() {
         time={SLIDE_DURATION}
         animate={state.isPlaying}
       />
-
-      {/* <VisuallyHidden>
-        <Alert>
-          Item {state.currentIndex + 1} of {slides.length}
-        </Alert>
-      </VisuallyHidden> */}
     </Carousel>
   );
 }
 
-export default HeroSlider;
+export default Scrolling(HeroSlider, 'heroSlider');
