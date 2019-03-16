@@ -1,18 +1,16 @@
 import React from 'react';
 import data from './../../resources/data/Home'
-import {
-    Element,
-} from "react-scroll";
+import Scrolling from './../Scrolling';
 import './AboutUs.scss';
 
 const AboutUs = () => {
     return (
-        <Element name="aboutUs" className="aboutUs">
+        <div className="aboutUs">
             <div className="container">
                 {data.paragraph}
             </div>
-        </Element>
+        </div>
     );
 };
 
-export default AboutUs;
+export default Scrolling(AboutUs, "aboutUs");
