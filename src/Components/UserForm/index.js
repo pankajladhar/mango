@@ -5,6 +5,7 @@ import FormValidator from './FormValidator';
 import FullPageLoader from './../FullPageLoader'
 import { WriteInFirebase } from './../../Firebase';
 import formDataText from './../../resources/data/UserForm';
+import { ourProductsData } from './../../resources/data'
 import './UserForm.scss';
 
 class UserForm extends Component {
@@ -126,11 +127,13 @@ class UserForm extends Component {
                         name="selectedProduct"
                         onChange={this.handleInputChange}
                         id="sel1">
-                        {/* <option value="1/2 dozen">1/2 dozen</option> */}
-                        <option value="1 dozen">1 dozen</option>
-                        <option value="2 dozen">2 dozen</option>
-                        <option value="3 dozen">3 dozen</option>
-                        <option value="5 dozen">5 dozen</option>
+                        {
+                            ourProductsData.map((d)=> {
+                                return (
+                                    <option key={d.title} value={d.title}>{d.title}</option>            
+                                )
+                            })
+                        }
                     </select>
                 </div>
                 <TextField {...this.getFromData(validation, 'cname')} />

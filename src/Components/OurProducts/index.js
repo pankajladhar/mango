@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductTile from './../ProductTile';
-import OurProductsData from './../../resources/data/OurProducts';
+import { ourProductsData } from './../../resources/data';
 import './OurProducts.scss';
 import {
     Element,
@@ -15,7 +15,7 @@ const OurProducts = props => {
                     <strong>Our</strong> products
                 </h1>
                 <div className="products">
-                    {OurProductsData.map((product, i) => (
+                    {ourProductsData.map((product, i) => (
                         <ProductTile key={i} {...product} />
                     ))}
                 </div>

@@ -1,8 +1,8 @@
-import img1 from "./../images/OurProducts/product-1.png";
+// import img1 from "./../images/OurProducts/product-1.png";
 import img2 from "./../images/OurProducts/product-2.png";
 import img3 from  "./../images/OurProducts/product-3.png";
 import img4 from  "./../images/OurProducts/product-4.png";
-import img5 from  "./../images/OurProducts/product-5.png";
+// import img5 from  "./../images/OurProducts/product-5.png";
 
 export default [
   // {
