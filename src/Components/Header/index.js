@@ -3,7 +3,7 @@ import Logo from './images/logo.png';
 import Navigation from './../Navigation';
 import Hamburger from './../Hamburger';
 import SocialIcons from './../UI/SocialIcons';
-import data from './../../resources/data/Footer'
+import { socialIconsData, addressData } from './../../resources/data'
 import './Header.scss';
 
 const Header = props => {
@@ -41,10 +41,10 @@ const Header = props => {
                 <div className="container">
                     <div className="subheader-content">
                         <div className="top-contact">
-                            <span> <i className={`icon-envelop`} /> {data.address.email}</span>
-                            <span> <i className={`icon-mobile`} /> {data.address.contactNumber}</span>
+                            <span> <i className={`icon-envelop`} /> {addressData.address.email}</span>
+                            <span> <i className={`icon-mobile`} /> {addressData.address.contactNumber}</span>
                         </div>
-                        <SocialIcons />
+                        <SocialIcons data={socialIconsData} />
                     </div>
                 </div>
             </div>

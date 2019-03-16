@@ -5,7 +5,7 @@ import './OurProducts.scss';
 import {
     Element,
 } from "react-scroll";
-import data from './../../resources/data/Footer'
+import { addressData } from './../../resources/data'
 
 const OurProducts = props => {
     return (
@@ -20,7 +20,7 @@ const OurProducts = props => {
                     ))}
                 </div>
                 <p>
-                    For bulk orders or for regular supply of our mangoes please write to us at <u>{data.address.email}</u>
+                    For bulk orders or for regular supply of our mangoes please write to us at <u>{addressData.address.email}</u>
                 </p>
             </div>
         </Element>

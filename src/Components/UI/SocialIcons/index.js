@@ -1,35 +1,17 @@
 import React from 'react';
 import './SocialIcons.scss';
 
-const data = [
-    {
-        icon: "facebook2",
-        url: "#"
-    },
-    {
-        icon: "twitter",
-        url: "#"
-    },
-    {
-        icon: "instagram",
-        url: "#"
-    },
-    {
-        icon: "youtube",
-        url: "#"
-    }
-]
 
-const SocialIcons = props => {
+const SocialIcons = ({ data }) => {
     return (
         <div className="socialIcons">
             <ul>
                 {
-                    data.map(({icon, url}) => {
+                    data.map(({ icon, url }) => {
                         return (
                             <li key={icon}>
-                                <a href={url}>
-                                    <i className={`icon-${icon}`}/>
+                                <a href={url} target={`${url !== "javascipt:void(0)" ? "_blank" : "_self"}`}>
+                                    <i className={`icon-${icon}`} />
                                 </a>
                             </li>
                         )
