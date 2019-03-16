@@ -43,4 +43,4 @@ const WhoWeAre = props => {
     );
 };
 
-export default Scrolling(WhoWeAre, 'whoWeAre');
+export default Scrolling({ scrollId: "whoWeAre" })(WhoWeAre);

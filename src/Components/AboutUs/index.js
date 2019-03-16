@@ -13,4 +13,4 @@ const AboutUs = () => {
     );
 };
 
-export default Scrolling(AboutUs, "aboutUs");
+export default Scrolling({ scrollId: "aboutUs" })(AboutUs);

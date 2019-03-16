@@ -1,6 +1,5 @@
 import React, { useReducer, useEffect, useRef } from "react";
 import Scrolling from './../Scrolling';
-import slides from "./../../../resources/data/HeroSlider";
 import useProgress from "./useProgress";
 
 import './HeroSlider.scss';
@@ -70,7 +69,7 @@ function ProgressBar({ animate, time }) {
   );
 }
 
-function HeroSlider() {
+const HeroSlider = ({slides}) => {
   let [state, dispatch] = useReducer(
     (state, action) => {
       switch (action.type) {
@@ -169,4 +168,4 @@ function HeroSlider() {
   );
 }
 
-export default Scrolling(HeroSlider, 'heroSlider');
+export default Scrolling({ scrollId: "heroSlider" })(HeroSlider);

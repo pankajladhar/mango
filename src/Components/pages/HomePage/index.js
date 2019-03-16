@@ -10,13 +10,14 @@ import Certificates from './../../Certificates';
 import SrollToTop from './../../UI/SrollToTop';
 import Footer from './../../Footer';
 import CopyrightFooter from './../../CopyrightFooter';
+import { heroSliderData } from "./../../../resources/data";
 import './HomePage.scss'
 
 const HomePage = props => {
     return (
         <div className="app">
             <Header />
-            <HeroSlider />
+            <HeroSlider slides={heroSliderData} />
             <main>
                 <AboutUs />
                 <WhoWeAre />
