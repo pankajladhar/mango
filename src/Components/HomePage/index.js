@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSlider from './../HeroSlider';
+import HeroSlider from './../UI/HeroSlider';
 import Header from './../Header';
 import AboutUs from './../AboutUs';
 import WhoWeAre from './../WhoWeAre';
