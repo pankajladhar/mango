@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from './../Button';
+import Button from './../UI/Button';
 import ProductOverlay from './../ProductOverlay';
 import './ProductTile.scss';
 
