@@ -1,6 +1,6 @@
 import React from 'react';
 import data from './../../resources/data/Home'
-import Scrolling from './../Scrolling';
+import Scrolling from './../UI/Scrolling';
 import './AboutUs.scss';
 
 const AboutUs = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Scrolling from './../Scrolling';
+import Scrolling from './../UI/Scrolling';
 import WhoWeAreData from './../../resources/data/WhoWeAre.js';
 import './WhoWeAre.scss';
 

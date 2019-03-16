@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect, useRef } from "react";
-import Scrolling from './../Scrolling';
+import Scrolling from './../UI/Scrolling';
 import slides from "./../../resources/data/HeroSlider";
 import useProgress from "./useProgress";
 
