@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ReadFromFirebase } from './../../Firebase';
+import { ReadFromFirebase } from './../../../Firebase';
 import './ReportPage.scss';
 
 
