@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from './../UI/Button';
 import TextField from './../UI/TextField';
 import FormValidator from './FormValidator';
-import FullPageLoader from './../FullPageLoader'
+import FullPageLoader from './../UI/FullPageLoader'
 import { WriteInFirebase } from './../../Firebase';
 import formDataText from './../../resources/data/UserForm';
 import { ourProductsData } from './../../resources/data'
