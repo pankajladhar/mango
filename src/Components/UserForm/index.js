@@ -1,50 +1,53 @@
 import React, { Component } from 'react';
 import Button from './../UI/Button';
+import TextField from './../UI/TextField';
 import FormValidator from './FormValidator';
 import FullPageLoader from './../FullPageLoader'
 import { WriteInFirebase } from './../../Firebase';
+import formDataText from './../../resources/data/UserForm';
 import './UserForm.scss';
 
 class UserForm extends Component {
     constructor(props) {
         super(props);
+        this.formData = formDataText
         this.validator = new FormValidator([
             {
                 field: 'cname',
                 method: 'isEmpty',
                 validWhen: false,
-                message: 'Name is required.'
+                message: this.formData['cname'].requiredMsg
             },
             {
                 field: 'email',
                 method: 'isEmpty',
                 validWhen: false,
-                message: 'Email is required.'
+                message: this.formData['email'].requiredMsg
             },
             {
                 field: 'email',
                 method: 'isEmail',
                 validWhen: true,
-                message: 'That is not a valid email.'
+                message: this.formData['email'].ruleFailedMsg
             },
             {
                 field: 'phone',
                 method: 'isEmpty',
                 validWhen: false,
-                message: 'Pleave provide a phone number.'
+                message: this.formData['phone'].requiredMsg
             },
             {
                 field: 'phone',
                 method: 'matches',
                 args: [/^\(?\d\d\d\)? ?\d\d\d-?\d\d\d\d$/], // args is an optional array of arguements that will be passed to the validation method
                 validWhen: true,
-                message: 'That is not a valid phone number.'
+                message: this.formData['phone'].requiredMsg
             },
             {
                 field: 'address',
                 method: 'isEmpty',
                 validWhen: false,
-                message: 'Please provide delivery address.'
+                message: this.formData['address'].requiredMsg
             },
         ]);
 
@@ -59,7 +62,22 @@ class UserForm extends Component {
         }
 
         this.submitted = false;
+    }
 
+    getFromData = (validation, name) => {
+        const fieldName = name
+        return {
+            lableText: this.formData[fieldName].lableText,
+            type: this.formData[fieldName].type,
+            name: fieldName,
+            value: this.state[fieldName],
+            onChange: this.handleInputChange,
+            placeholder: this.formData[fieldName].placeholder,
+            hasError: {
+                isInvalid: validation[fieldName].isInvalid,
+                message: validation[fieldName].message
+            }
+        }
     }
 
     handleInputChange = event => {
@@ -94,8 +112,6 @@ class UserForm extends Component {
         }
     }
 
-
-
     render() {
         let validation = this.submitted ?                         // if the form has been submitted at least once
             this.validator.validate(this.state) :   // then check validity every time we render
@@ -117,54 +133,10 @@ class UserForm extends Component {
                         <option value="5 dozen">5 dozen</option>
                     </select>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="cname">
-                        Name
-                            <span className="asterisk">*</span>
-                    </label>
-                    <input type="text"
-                        name="cname"
-                        id="cname"
-                        value={this.state.cname}
-                        onChange={this.handleInputChange}
-                        placeholder="Please enter your name"
-                        className={`form-control ${validation.cname.isInvalid && 'error'}`} />
-                    <label className="has-error">{validation.cname.message}</label>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="emailid">Email
-                        <span className="asterisk">*</span></label>
-                    <input type="email"
-                        name="email"
-                        id="emailid"
-                        placeholder="Please enter your email"
-                        onChange={this.handleInputChange}
-                        className={`form-control ${validation.email.isInvalid && 'error'}`} />
-                    <label className="has-error">{validation.email.message}</label>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="phone">Contact number
-                        <span className="asterisk">*</span>
-                    </label>
-                    <input type="tel"
-                        name="phone"
-                        id="phone"
-                        onChange={this.handleInputChange}
-                        placeholder="Please enter your contact number"
-                        className={`form-control ${validation.phone.isInvalid && 'error'}`} />
-                    <label className="has-error">{validation.phone.message}</label>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="address">Delivery address
-                        <span className="asterisk">*</span></label>
-                    <textarea id="address"
-                        name="address"
-                        onChange={this.handleInputChange}
-                        placeholder="Please enter your address"
-                        className={`form-control ${validation.phone.isInvalid && 'error'}`} >
-                    </textarea>
-                    <label className="has-error">{validation.address.message}</label>
-                </div>
+                <TextField {...this.getFromData(validation, 'cname')} />
+                <TextField {...this.getFromData(validation, 'email')} />
+                <TextField {...this.getFromData(validation, 'phone')} />
+                <TextField {...this.getFromData(validation, 'address')} />
                 <div className="btn-container">
                     <Button title="Save Details" onClick={this.handleFormSubmit} />
                 </div>
