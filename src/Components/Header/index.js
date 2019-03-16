@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Logo from './images/logo.png';
-import Navigation from './../Navigation';
-import Hamburger from './../Hamburger';
+import Navigation from './../UI/Navigation';
+import Hamburger from './../UI/Hamburger';
 import SocialIcons from './../UI/SocialIcons';
 import { socialIconsData, addressData } from './../../resources/data'
 import './Header.scss';
@@ -53,9 +53,6 @@ const Header = props => {
                 <a href="/">
                     <img className="logo" src={Logo} />
                 </a>
-                {/* <div className="social-icons-mobile mobileOnly">
-                    <SocialIcons />
-                </div> */}
                 <Navigation toggle={toggle} />
             </div>
         </header>

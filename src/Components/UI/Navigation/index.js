@@ -4,8 +4,8 @@ import {
     Link,
     Events,
 } from "react-scroll";
-import Button from './../UI/Button';
-import ProductOverlay from './../ProductOverlay';
+import Button from './../Button';
+import ProductOverlay from './../../ProductOverlay';
 
 const navigationData = [
     {
