@@ -3,7 +3,7 @@ import data from './../../resources/data/Footer';
 import {
     Element,
 } from "react-scroll";
-import SocialIcons from './../SocialIcons'
+import SocialIcons from './../UI/SocialIcons'
 import './Footer.scss';
 
 const Footer = props => {

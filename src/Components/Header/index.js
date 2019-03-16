@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Logo from './images/logo.png';
 import Navigation from './../Navigation';
 import Hamburger from './../Hamburger';
-import SocialIcons from './../SocialIcons';
+import SocialIcons from './../UI/SocialIcons';
 import data from './../../resources/data/Footer'
 import './Header.scss';
 
