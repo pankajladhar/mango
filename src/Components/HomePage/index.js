@@ -7,7 +7,7 @@ import WhyMango from './../WhyMango';
 import OurFarm from './../OurFarm';
 import OurProducts from './../OurProducts';
 import Certificates from './../Certificates';
-import SrollToTop from './../SrollToTop';
+import SrollToTop from './../UI/SrollToTop';
 import Footer from './../Footer';
 import CopyrightFooter from './../CopyrightFooter';
 import './HomePage.scss'
