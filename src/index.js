@@ -1,6 +1,69 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Components/App';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import {createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage/session';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
+import { PersistGate } from 'redux-persist/integration/react';
+
+import HomePage from './Route/HomePage/HomePage';
+import CheckoutPage from './Route/CheckoutPage/CheckoutPage';
+import ReportPage from './Route/ReportPage/ReportPage';
+import ConfirmationPage from './Route/ConfirmationPage/ConfirmationPage';
+import ErrorPage from './Route/ErrorPage/ErrorPage';
+import rootReducer from './Containers/reducers';
+import { checkoutPageData } from './resources/data'
 import './style.scss';
+
+const persistConfig = {
+    key: "GoodRoots",
+    storage,
+    stateReconciler: autoMergeLevel2,
+    version: "1.0.0"
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+let store = createStore(persistedReducer);
+
+let persistor = persistStore(store)
+
+const App = () => {
+    return (
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <Router>
+                    <div>
+                        <Route path="/mango"
+                            exact
+                            render={(props) => <HomePage {...props} showNavigation />}
+                        />
+                        <Route path="/mango/checkout"
+                            exact
+                            render={(props) => <CheckoutPage {...props} data={checkoutPageData} />}
+                        />
+                        <Route path="/mango/confirmation"
+                            exact
+                            render={(props) => <ConfirmationPage {...props} />}
+                        />
+
+                        <Route path="/mango/error"
+                            exact
+                            render={(props) => <ErrorPage {...props} />}
+                        />
+
+                        <Route path="/mango/report"
+                            exact
+                            render={(props) => <ReportPage {...props} />}
+                        />
+                    </div>
+                </Router>
+            </PersistGate>
+        </Provider>
+    );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,0 +1,36 @@
+.whoWeAre {
+  background: #f9f8f4;
+  h2 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    // margin-top: 10px;
+    font-size: 1.2rem;
+    @media (min-width: 576px) {
+      font-size: 1.5rem
+    }
+  }
+  .col-3 {
+    overflow: hidden;
+    img {
+      transition: transform .5s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+  p, ul { 
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+}

@@ -9,8 +9,8 @@ export default [
     content:
       `Now, you can buy mangoes online from <br />the comfort of your home.`,
     action: {
-      text: "Prebook now",
-      scrollTo: "ourProducts"
+      text: "Why GoodRoots",
+      scrollTo: "whyMango"
     }
   },
   {
@@ -19,7 +19,7 @@ export default [
     content:
       ` The best quality Alphonso mangoes from <br /> our farms to your home`,
     action: {
-      text: "Know more",
+      text: "Who we are",
       scrollTo: "whoweare"
     }
   },
@@ -27,6 +27,11 @@ export default [
     img: img3,
     title: "Gift Happiness <br /> & Sweetness",
     content:
-      `A gift like no other. Gift your loved ones this season`
+      `A gift like no other. Gift your loved ones this season`,
+    action: {
+      isClickable: true,
+      text: "Prebook now",
+      scrollTo: "ourProducts"
+    }
   }
 ];

@@ -3,13 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
     "firebase": "^5.8.6",
+    "lodash": "^4.17.11",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-icons": "^3.5.0",
+    "react-redux": "^6.0.1",
     "react-responsive-carousel": "^3.1.47",
     "react-router-dom": "^4.3.1",
     "react-scroll": "^1.7.11",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
     "simple-react-validator": "^1.0.5",
     "validator": "^10.11.0"
   },
@@ -22,7 +28,8 @@
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "redux-logger": "^3.0.6"
   },
   "browserslist": [
     ">0.2%",

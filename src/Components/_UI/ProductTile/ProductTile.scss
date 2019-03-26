@@ -1,0 +1,55 @@
+.productTile {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  border-top: 6px solid #f28c14;
+  // width: 100%;
+  box-shadow: 0px 40px 20px -40px rgb(133, 133, 133);
+  background: #ffffff;
+  padding: 20px;
+  margin: 0 20px;
+  a {
+    text-decoration: none;
+  }
+  .productImage {
+    img {
+      transform: scale(0.8);
+      transition: all 0.5s ease;
+      flex: 1;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+  .productInfo {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .button {
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .title {
+    display: block;
+  }
+
+  .cost {
+    display: block;
+    font-size: 1.6rem;
+    padding-top: 0.8em;
+    &::before {
+      font-family: Arial, Helvetica, sans-serif;
+      content: "₹";
+      display: inline-block;
+      padding-right: 5px;
+    }
+  }
+}

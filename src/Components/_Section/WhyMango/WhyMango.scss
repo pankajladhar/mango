@@ -1,0 +1,134 @@
+.WhyMango {
+  .WhyMango-content {
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    .image-container {
+      @media (max-width: 768px) {
+        display: none;
+      }
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin: 0 20px;
+      .bgImg {
+        flex: 1;
+        background-image: url('./../../../resources/images/WhyMango/WhyMango-1.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.5s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .left-item {
+    text-align: right;
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+    }
+    .item-content {
+      flex: 1;
+      margin-right: 15px;
+      @media (max-width: 768px) {
+        order: 2;
+        margin-right: 0;
+      }
+    }
+  }
+  .right-item {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+    }
+    .item-content {
+      flex: 1;
+      margin-left: 15px;
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
+    }
+  }
+  .center-item {
+    text-align: center;
+    .item-content {
+      padding-top: 10px;
+      @media (max-width: 768px) {
+        padding-top: 0px; 
+      }
+    }
+  }
+  .item {
+    list-style: none;
+    padding-bottom: 40px;
+    @media (max-width: 768px) {
+      padding-bottom: 0px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    .icon {    
+      border: 2px transparent solid;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      text-align: center;
+      font-size: 40px;
+      padding-top: 9px;
+      // background: #9fc74d;
+      color: #fff;
+      background: #650a1f;
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+      &:hover {
+        background: #fff;
+        color: #650a1f;
+        border-color: #650a1f;
+      }
+    }
+    p {
+      line-height: 1.6;
+      font-size: 14px;
+      @media (max-width: 768px) {
+        font-size: 13px; 
+      }
+    }
+    strong {
+      font-size: 16px;
+      color: #343a40;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    &.center-item-1 {
+      padding-bottom: 0px;
+    }
+    &.center-item-2 {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+  }
+
+  .WhyMango-content-list {
+    width: 28%;
+    margin: 0;
+    padding: 0;
+    @media (max-width: 768px) {
+      width: 45%;
+    }
+  }
+}
